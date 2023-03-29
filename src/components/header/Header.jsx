@@ -168,6 +168,7 @@ const Header = ({ isFixed, className, searchInput }) => {
             </HeaderWrapper>
         );
     }
+
     return (
         <HeaderWrapper className={clsx(className)}>
             <StyledContainer>

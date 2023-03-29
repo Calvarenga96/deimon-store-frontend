@@ -1,6 +1,10 @@
 {
     "compilerOptions": {
-        "baseUrl": "src"
+        "baseUrl": "src",
+        "paths": {
+            "@axios": ["utils/axios"],
+            "@api": ["utils/__api__/*"]
+        }
     },
     "include": ["src"]
 }

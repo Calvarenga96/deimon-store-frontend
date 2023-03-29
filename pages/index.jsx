@@ -2,7 +2,6 @@ import { Box, useTheme } from "@mui/material";
 import SEO from "components/SEO";
 import ShopLayout1 from "components/layouts/ShopLayout1";
 import Section1 from "pages-sections/fashion-shop-2/Section1";
-import Section2 from "pages-sections/fashion-shop-2/Section2";
 import Section3 from "pages-sections/fashion-shop-2/Section3";
 import Section4 from "pages-sections/fashion-shop-2/Section4";
 import Section5 from "pages-sections/fashion-shop-2/Section5";
@@ -25,9 +24,6 @@ const FashionShop2 = (props) => {
             <Box bgcolor="white">
                 {/* HERO SECTION CAROUSEL */}
                 <Section1 carouselData={props.mainCarouselData} />
-
-                {/* SERVICE CARDS */}
-                <Section2 serviceList={props.serviceList} />
 
                 {/* BEST SELLING CATEGORIES */}
                 <Section3 categories={props.categories} />
@@ -65,7 +61,6 @@ export const getStaticProps = async () => {
     const blogs = await api.getBlogs();
     const brands = await api.getBrands();
     const products = await api.getProducts();
-    const serviceList = await api.getServices();
     const categories = await api.getCategories();
     const saleProducts = await api.getSaleProducts();
     const latestProducts = await api.getLatestProducts();
@@ -79,7 +74,6 @@ export const getStaticProps = async () => {
             brands,
             products,
             categories,
-            serviceList,
             saleProducts,
             latestProducts,
             popularProducts,
