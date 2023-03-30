@@ -257,8 +257,8 @@ const services = [
 ];
 
 const benefits = [
-    { title: "Descuentos", link: "/ads" },
-    { title: "Opiniones de Clientes", link: "/used" },
+    { title: "Descuentos", link: "/discounts" },
+    { title: "Opiniones de Clientes", link: "/clients-opinion" },
     { title: "Puntos con Streamers", link: "/points-streamers" },
 ];
 
@@ -272,7 +272,7 @@ const legal = [
 const iconList = [
     {
         icon: Facebook,
-        url: "https://www.facebook.com/UILibOfficial",
+        url: "https://www.facebook.com/deimonstore",
     },
     {
         icon: Twitter,

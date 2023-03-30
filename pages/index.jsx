@@ -11,6 +11,7 @@ import Section8 from "pages-sections/fashion-shop-2/Section8";
 import Section9 from "pages-sections/fashion-shop-2/Section9";
 import Section10 from "pages-sections/fashion-shop-2/Section10";
 import api from "utils/__api__/fashion-shop-2";
+import api2 from "utils/__api__/home";
 
 // =======================================================
 
@@ -18,6 +19,7 @@ import api from "utils/__api__/fashion-shop-2";
 
 const FashionShop2 = (props) => {
     const theme = useTheme();
+
     return (
         <ShopLayout1 topbarBgColor={theme.palette.grey[900]}>
             <SEO title="Deimon Store" />
@@ -57,11 +59,12 @@ const FashionShop2 = (props) => {
         </ShopLayout1>
     );
 };
+
 export const getStaticProps = async () => {
     const blogs = await api.getBlogs();
     const brands = await api.getBrands();
     const products = await api.getProducts();
-    const categories = await api.getCategories();
+    const categories = await api2.getBestSellerCategories();
     const saleProducts = await api.getSaleProducts();
     const latestProducts = await api.getLatestProducts();
     const popularProducts = await api.getPopularProducts();
@@ -83,4 +86,5 @@ export const getStaticProps = async () => {
         },
     };
 };
+
 export default FashionShop2;

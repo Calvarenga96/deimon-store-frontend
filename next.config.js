@@ -8,4 +8,7 @@ module.exports = {
         theme: "DEFAULT",
         currency: "USD",
     },
+    images: {
+        domains: ["C:\\Users\\User\\AppData\\Local\\Temp"],
+    },
 };
